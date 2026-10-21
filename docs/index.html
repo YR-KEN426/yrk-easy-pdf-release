@@ -405,7 +405,7 @@
         <h3>ถ้า Windows ขึ้นหน้าจอสีน้ำเงิน “Windows protected your PC”</h3>
         <p>ตัวติดตั้งยังไม่มีใบรับรองผู้เผยแพร่ (code signing) Windows จึงยืนยันไม่ได้ว่าใครเป็นผู้สร้าง และแสดงผู้เผยแพร่เป็น “Unknown publisher”</p>
         <p>ก่อนกด <strong>More info</strong> แล้ว <strong>Run anyway</strong> ให้ตรวจว่าดาวน์โหลดจากหน้านี้ หรือจาก github.com/YR-KEN426 เท่านั้น และชื่อไฟล์คือ YRK.EasyPdf-win-Setup.exe ถ้าได้ไฟล์มาจากที่อื่น อย่าเปิด</p>
-        <p>การเตือนนี้ไม่ได้แปลว่าพบไวรัส <a href="#faq">อ่านเหตุผลและวิธีตรวจไฟล์ด้วยตัวเอง</a></p>
+        <p>การเตือนนี้ไม่ได้แปลว่าพบไวรัส <a href="#faq-smartscreen">อ่านว่าทำไมถึงขึ้น</a> และ <a href="#faq-check">วิธีตรวจไฟล์ด้วยตัวเอง</a></p>
       </div>
     </div>
   </section>
@@ -429,13 +429,13 @@
           <summary>ปลอดภัยไหม เอกสารของฉันถูกส่งไปที่ไหนหรือเปล่า</summary>
           <p>เอกสารเปิดและแก้ในเครื่องของคุณเท่านั้น โปรแกรมไม่มี AI ไม่เก็บสถิติ และไม่อัปโหลดเอกสาร รายละเอียดอยู่ในหน้า “ความเป็นส่วนตัวและความปลอดภัย” ในโปรแกรม</p>
         </details>
-        <details>
+        <details id="faq-smartscreen">
           <summary>ทำไมตอนติดตั้งขึ้นหน้าจอสีน้ำเงิน “Windows protected your PC”</summary>
           <p>หน้าจอนี้มาจาก Microsoft Defender SmartScreen ซึ่งมักเตือนโปรแกรมที่ยังไม่มี “ใบรับรองผู้เผยแพร่” (code signing certificate) หรือยังมีคนดาวน์โหลดไม่มาก ใบรับรองนี้เป็นบริการที่ต้องซื้อรายปี โปรแกรมฟรีจากผู้พัฒนารายเล็กจึงมักยังไม่มี Windows จึงแสดงผู้เผยแพร่เป็น “Unknown publisher”</p>
           <p>การเตือนนี้ <strong>ไม่ได้แปลว่าพบไวรัส</strong> แต่แปลว่า Windows ยังยืนยันไม่ได้ว่าใครเป็นผู้สร้าง ถ้า Microsoft Defender พบไวรัสจริง จะแจ้งว่าพบภัยคุกคาม (threat) และกักไฟล์ไว้ ไม่ใช่หน้าจอนี้</p>
           <p>การตัดสินใจติดตั้งเป็นของคุณ ถ้าดาวน์โหลดจากหน้านี้หรือจาก github.com/YR-KEN426 และตรวจไฟล์ตามหัวข้อถัดไปแล้ว ติดตั้งต่อได้โดยกด <strong>More info</strong> (ข้อมูลเพิ่มเติม) แล้ว <strong>Run anyway</strong> (เรียกใช้ต่อไป) ถ้าได้ไฟล์มาจากที่อื่น เช่น ส่งต่อกันในแชต อย่าเปิด ให้ดาวน์โหลดใหม่จากหน้านี้</p>
         </details>
-        <details>
+        <details id="faq-check">
           <summary>ตรวจสอบไฟล์ก่อนติดตั้งอย่างไร</summary>
           <p>ทำได้ 2 วิธี และทำทั้งสองอย่างได้:</p>
           <p><strong>1. สแกนด้วย Windows Security:</strong> คลิกขวาที่ไฟล์ YRK.EasyPdf-win-Setup.exe แล้วเลือก “Scan with Microsoft Defender” (ใน Windows 11 อยู่ใน “Show more options”)</p>
@@ -452,7 +452,8 @@
         </details>
         <details>
           <summary>โปรแกรมแอนตี้ไวรัสของฉันเตือน ทำอย่างไรดี</summary>
-          <p>โปรแกรมแอนตี้ไวรัสบางตัวเตือนโปรแกรมใหม่ที่ยังไม่มีใบรับรองผู้เผยแพร่ แม้ไฟล์จะไม่มีอันตราย ให้ตรวจก่อนว่าดาวน์โหลดจากหน้านี้ และค่า SHA-256 ตรงกับหน้ารายละเอียดรุ่น ถ้ายังไม่แน่ใจ <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-H6KQaZ6cZFB6L73aECFCWo84fS7jO5z4AyMol7P8mzGuJQ/viewform">แจ้งเรา</a> พร้อมชื่อโปรแกรมแอนตี้ไวรัสและข้อความที่ขึ้น เราจะตรวจสอบให้</p>
+          <p>คำเตือนอาจเกิดได้จากหลายสาเหตุ เช่น โปรแกรมยังใหม่และยังไม่มีใบรับรองผู้เผยแพร่ หรือไฟล์ถูกเปลี่ยนระหว่างทาง <strong>ให้หยุดติดตั้งก่อน</strong> แล้วตรวจว่าดาวน์โหลดจากหน้านี้ และค่า SHA-256 ตรงกับหน้ารายละเอียดรุ่น</p>
+          <p>จากนั้น <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-H6KQaZ6cZFB6L73aECFCWo84fS7jO5z4AyMol7P8mzGuJQ/viewform">แจ้งเรา</a> พร้อมชื่อโปรแกรมแอนตี้ไวรัส ชื่อภัยคุกคามที่แสดง และรุ่นของไฟล์ เราจะตรวจสอบและตอบกลับ</p>
         </details>
         <details>
           <summary>ต้องต่ออินเทอร์เน็ตไหม</summary>
@@ -526,6 +527,16 @@
     new IntersectionObserver(function (entries) {
       bar.classList.toggle("show", !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0);
     }).observe(cta);
+  })();
+
+  // A link to one question (#faq-check) opens that answer, not just the list.
+  (function () {
+    function openTarget() {
+      var target = location.hash && document.getElementById(location.hash.slice(1));
+      if (target && target.tagName === "DETAILS") { target.open = true; target.scrollIntoView(); }
+    }
+    window.addEventListener("hashchange", openTarget);
+    openTarget();
   })();
 </script>
 </body>
